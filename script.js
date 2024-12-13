@@ -20,3 +20,8 @@ function createClothingButtons(containerId, items, layerId) {
 createClothingButtons("top-options", tops, "top-layer");
 createClothingButtons("bottom-options", bottoms, "bottom-layer");
 createClothingButtons("shoes-options", shoes, "shoes-layer");
+
+function changeClothing(layerId, imagePath) {
+    const layer = document.getElementById(layerId);
+    layer.src = imagePath;
+}
