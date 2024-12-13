@@ -1,5 +1,5 @@
 // Define the options for each category
-const tops = ["assets/tops/top1.png", "assets/tops/top2.png"];
+const tops = ["assets/tops/assets/Screenshot 2024-12-12 at 14.49.32.png", "assets/tops/top2.png"];
 const bottoms = ["assets/bottoms/bottom1.png", "assets/bottoms/bottom2.png"];
 const shoes = ["assets/shoes/shoes1.png", "assets/shoes/shoes2.png"];
 
