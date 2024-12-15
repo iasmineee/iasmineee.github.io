@@ -5,15 +5,15 @@ body {
     padding: 0;
     height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* 3 colunas (1 para a esquerda, 3 para o centro, 1 para a direita) */
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
     grid-template-rows: 100%; /* A altura das linhas é 100% da tela */
 }
 
 /* Área 1 e 3 (esquerda e direita) */
 .left, .right {
-    background-image: url('assets/leopard-pattern.jpg'); /* A mesma imagem de fundo para a esquerda e direita */
-    background-size: cover;
-    background-position: center;
+    background-image: url('assets/leopard-pattern.jpg'); /* Imagem de fundo */
+    background-size: auto 100%; /* Ajuste da imagem para cobrir toda a altura da tela de forma vertical */
+    background-position: center top; /* Centraliza a imagem na parte superior */
     background-repeat: no-repeat;
     height: 100vh; /* As áreas laterais ocupam 100% da altura da tela */
 }
@@ -86,4 +86,11 @@ button:hover {
 /* Media query para telas pequenas (celulares) */
 @media (max-width: 600px) {
     .options-container {
-        flex-direction: column; /* Botões empilham-se e
+        flex-direction: column; /* Botões empilham-se em telas pequenas */
+        gap: 10px;
+    }
+
+    button {
+        width: auto; /* Botões voltam ao tamanho natural em telas pequenas */
+    }
+}
