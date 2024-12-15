@@ -8,11 +8,9 @@
 </head>
 <body>
     <!-- Divisão do Layout em 3 áreas -->
-    <div class="left"></div> <!-- Área esquerda com fundo de leopardo -->
+    <div class="left"></div> <!-- Área esquerda (com fundo de leopardo) -->
     
     <div class="center">
-        <h1>Escolha suas roupas</h1>
-        
         <!-- Imagem da parte de cima (camisa) -->
         <div class="image-container">
             <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Parte de cima">
@@ -40,23 +38,25 @@
             </div>
         </div>
 
-        <!-- Botões BROWSE e DRESS ME -->
-        <div class="action-buttons">
-            <button class="browse-btn">BROWSE</button>
-            <button class="dress-btn" onclick="showAvatar()">DRESS ME</button>
+        <!-- Botões de interação -->
+        <div class="actions">
+            <button id="dress-me-btn" onclick="dressMe()">Dress Me</button>
+            <button id="browse-btn" onclick="browse()">Browse</button>
         </div>
-
-        <!-- Avatar com as roupas selecionadas -->
-        <div class="avatar-container" id="avatar-container" style="display: none;">
-            <h2>Seu Look</h2>
-            <div class="avatar">
-                <img id="avatar-top" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Avatar Top">
-                <img id="avatar-bottom" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Avatar Bottom">
+        
+        <!-- Avatar para mostrar após o "Dress Me" -->
+        <div id="avatar-container" style="display: none;">
+            <h2>Look final:</h2>
+            <div class="image-container">
+                <img id="avatar-top" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Parte de cima final">
+            </div>
+            <div class="image-container">
+                <img id="avatar-bottom" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Parte de baixo final">
             </div>
         </div>
     </div>
 
-    <div class="right"></div> <!-- Área direita com fundo de leopardo -->
+    <div class="right"></div> <!-- Área direita (com fundo de leopardo) -->
     
     <script src="script.js"></script>
 </body>
