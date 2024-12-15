@@ -11,7 +11,7 @@ body {
 
 /* Área 1 e 3 (esquerda e direita) */
 .left, .right {
-    background-image: url('assets/leopard-pattern.jpg'); /* Imagem de fundo */
+    background-image: url('https://via.placeholder.com/500x1000.png/000000/FFFFFF?text=Leopard+Pattern'); /* Imagem de fundo */
     background-size: auto 100%; /* Ajuste da imagem para cobrir toda a altura da tela de forma vertical */
     background-position: center top; /* Centraliza a imagem na parte superior */
     background-repeat: no-repeat;
