@@ -29,12 +29,20 @@ h1 {
     text-align: center; /* Centraliza a imagem dentro do contêiner */
 }
 
-/* Estilo para as imagens */
+/* Estilo para as imagens das roupas */
 img {
     max-width: 300px; /* Limita o tamanho máximo da imagem para 300px */
     width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px;
+}
+
+/* Para a imagem da calça, se precisar de um ajuste específico */
+#bottom-img {
+    max-width: 300px; /* Limita o tamanho máximo da imagem da calça */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
 
 /* Contêiner para os botões de opções (roupa de cima e de baixo) */
