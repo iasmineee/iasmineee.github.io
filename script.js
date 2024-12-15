@@ -8,16 +8,22 @@ function changeBottom(image) {
     document.getElementById('bottom-img').src = image;
 }
 
-// Função para mostrar o avatar com as roupas escolhidas
-function showAvatar() {
-    // Mostrar o avatar com as roupas escolhidas
-    document.getElementById('avatar-container').style.display = 'block';
+// Função para exibir o look final após clicar em "Dress Me"
+function dressMe() {
+    var topImg = document.getElementById('top-img').src;
+    var bottomImg = document.getElementById('bottom-img').src;
 
-    // Definir as roupas no avatar
-    var topImage = document.getElementById('top-img').src;
-    var bottomImage = document.getElementById('bottom-img').src;
+    document.getElementById('avatar-top').src = topImg;
+    document.getElementById('avatar-bottom').src = bottomImg;
 
-    // Atualizar as imagens do avatar
-    document.getElementById('avatar-top').src = topImage;
-    document.getElementById('avatar-bottom').src = bottomImage;
+    document.getElementById('avatar-container').style.display = 'block'; // Exibe o look final
+    document.getElementById('dress-me-btn').style.display = 'none'; // Esconde o botão "Dress Me"
+    document.getElementById('browse-btn').style.display = 'none'; // Esconde o botão "Browse"
+}
+
+// Função para reiniciar o processo e esconder o look final
+function browse() {
+    document.getElementById('avatar-container').style.display = 'none'; // Esconde o look final
+    document.getElementById('dress-me-btn').style.display = 'inline-block'; // Exibe o botão "Dress Me"
+    document.getElementById('browse-btn').style.display = 'inline-block'; // Exibe o botão "Browse"
 }
