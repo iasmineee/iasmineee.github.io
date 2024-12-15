@@ -3,7 +3,7 @@ body {
     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/994/444/desktop-wallpaper-leopard-print-leopard-pattern.jpg'); /* Imagem de fundo leopardo */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     margin: 0;
     padding: 0;
     text-align: center;
