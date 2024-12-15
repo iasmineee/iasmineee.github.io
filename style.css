@@ -7,12 +7,15 @@ body {
 }
 
 .container {
+    text-align: center;
     max-width: 900px;
     margin: 20px auto;
 }
 
 .avatar-container {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -24,12 +27,22 @@ body {
 
 .layer {
     display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
 }
 
 .options-container {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .options-container {
+        flex-direction: column; /* Empilha as opções verticalmente */
+        gap: 10px; /* Reduz o espaço */
+    }
 }
 
 .options h3 {
@@ -48,4 +61,14 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:focus {
+    outline: 2px solid #ffcc00; /* Contorno visível */
+    outline-offset: 2px;
 }
