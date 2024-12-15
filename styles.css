@@ -1,65 +1,42 @@
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('assets/leopard-pattern.jpg'); /* Caminho correto da imagem */
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Leopard+Print'); /* Substitua pelo seu fundo de leopardo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     text-align: center;
-    height: 100vh; /* Garante que a imagem ocupe toda a altura da tela */
-    display: flex;
-    flex-direction: row; /* Disposição das áreas em linha */
 }
 
-/* Área Esquerda */
-.left, .right {
-    flex: 1; /* Garante que as áreas laterais ocupem 1 parte cada */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente com opacidade */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
 }
 
-/* Área central */
-.center {
-    flex: 2; /* A área central ocupa o dobro do espaço das laterais */
-    padding: 20px;
-    z-index: 2; /* Garante que o conteúdo central fique sobre o fundo */
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
-}
-
-/* Título */
-h1 {
-    margin-bottom: 20px;
-}
-
-/* Contêiner das imagens */
 .image-container {
     margin: 20px;
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da tela */
-    text-align: center; /* Centraliza a imagem dentro do contêiner */
+    max-width: 100%;
+    text-align: center;
 }
 
-/* Estilo das imagens */
 img {
     max-width: 300px; /* Limita o tamanho máximo da imagem para 300px */
-    width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
-/* Estilo dos botões */
 .options-container {
     display: flex;
     justify-content: center;
     gap: 40px;
 }
 
-/* Estilo das opções (Camisas e Calças) */
 .options {
     text-align: left;
 }
 
-/* Estilo do botão */
 button {
     background-color: #007bff;
     color: white;
@@ -76,36 +53,26 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Estilo específico para os botões BROWSE e DRESS ME */
-.action-buttons {
+.actions {
+    margin-top: 20px;
+}
+
+#avatar-container {
     margin-top: 30px;
 }
 
-.browse-btn, .dress-btn {
-    background-color: #ff69b4; /* Cor de fundo rosa, estilo *Clueless* */
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 25px;
-    width: 80%; /* Largura ajustada para não ocupar toda a tela */
-    max-width: 300px; /* Tamanho máximo dos botões */
+.left, .right {
+    width: 20%;
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Leopard+Pattern'); /* Fundo de leopardo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    float: left;
 }
 
-.browse-btn:hover, .dress-btn:hover {
-    background-color: #ff1493; /* Tom mais escuro ao passar o mouse */
-}
-
-/* Estilo do avatar com as roupas */
-.avatar-container {
-    display: none; /* Inicialmente escondido, só aparece após o clique no "DRESS ME" */
-    margin-top: 40px;
-}
-
-.avatar img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    margin: 10px;
+.center {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
 }
