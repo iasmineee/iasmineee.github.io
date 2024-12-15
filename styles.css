@@ -1,6 +1,7 @@
+/* Define a fonte padrão e o fundo do corpo */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('assets/leopard-pattern.jpg'); /* Caminho correto da imagem */
+    background-image: url('assets/leopard-pattern.jpg'); /* Caminho correto da imagem de fundo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,75 +10,75 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #000;
-    margin-top: 20px;
-    font-size: 2.5rem;
-}
-
+/* Container que vai centralizar o conteúdo da página */
 .container {
     max-width: 900px;
     margin: 20px auto;
-    background-color: white;
-    border: 2px solid black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.avatar-container {
-    position: relative;
-    width: 300px;
-    margin: 20px auto;
+/* Título principal da página */
+h1 {
+    margin-bottom: 20px;
 }
 
-.avatar-container img {
-    position: absolute;
-    width: 100%;
-}
-
-.layer {
-    display: block;
-}
-
-.options-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.options h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-button {
-    background-color: #9b59b6; /* Roxo estiloso */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-button:hover {
-    background-color: #7d3c98;
-    transform: scale(1.1);
-}
-
+/* Contêiner para as imagens das roupas (parte de cima e parte de baixo) */
 .image-container {
     margin: 20px;
     max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da tela */
     text-align: center; /* Centraliza a imagem dentro do contêiner */
 }
 
+/* Estilo para as imagens */
 img {
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
-    width: 100%; /* Faz com que a imagem seja redimensionada proporcionalmente */
+    max-width: 300px; /* Limita o tamanho máximo da imagem para 300px */
+    width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px;
+}
+
+/* Contêiner para os botões de opções (roupa de cima e de baixo) */
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Adiciona wrap para responsividade */
+}
+
+/* Estilo para a seção das opções */
+.options {
+    text-align: left;
+}
+
+/* Estilo para os botões */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: block;
+    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+}
+
+/* Estilo ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query para dispositivos menores (celulares, por exemplo) */
+@media (max-width: 600px) {
+    .options-container {
+        flex-direction: column; /* Empilha as opções verticalmente */
+        gap: 10px; /* Reduz o espaço entre as opções */
+    }
+
+    .options {
+        width: 100%; /* Garante que as opções ocupem toda a largura disponível */
+    }
+
+    button {
+        width: auto; /* Faz os botões voltarem ao tamanho natural */
+    }
 }
