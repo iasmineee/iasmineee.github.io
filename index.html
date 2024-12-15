@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Closet</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Armário Virtual</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Avatar Model with Clothing Layers -->
+        <h1>Armário da Cher</h1>
         <div class="avatar-container">
-            <img id="avatar" src="assets/avatar.png" alt="Avatar">
-            <img id="top-layer" class="layer" src="assets/tops/top1.png" alt="Top">
-            <img id="bottom-layer" class="layer" src="assets/bottoms/bottom1.png" alt="Bottom">
-            <img id="shoes-layer" class="layer" src="assets/shoes/shoes1.png" alt="Shoes">
+            <!-- Área das imagens -->
+            <div id="top-layer" class="layer">
+                <img id="top-img" src="camisa1.png" alt="Camisa">
+            </div>
+            <div id="bottom-layer" class="layer">
+                <img id="bottom-img" src="calca1.png" alt="Calça">
+            </div>
         </div>
 
-        <!-- Clothing Selection -->
+        <!-- Botões de troca -->
         <div class="options-container">
-            <div id="top-options" class="options"></div>
-            <div id="bottom-options" class="options"></div>
-            <div id="shoes-options" class="options"></div>
+            <div class="options">
+                <h3>Parte de Cima</h3>
+                <button onclick="changeTop('camisa1.png')">Camisa 1</button>
+                <button onclick="changeTop('camisa2.png')">Camisa 2</button>
+            </div>
+            <div class="options">
+                <h3>Parte de Baixo</h3>
+                <button onclick="changeBottom('calca1.png')">Calça 1</button>
+                <button onclick="changeBottom('calca2.png')">Calça 2</button>
+            </div>
         </div>
     </div>
 
