@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armário Virtual da Cher</title>
+    <title>Armário Virtual</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Armário Virtual da Cher</h1>
+        <h1>Escolha suas roupas</h1>
         
-        <!-- Área onde as roupas aparecem -->
-        <div class="avatar-container">
-            <!-- Parte de Cima -->
-            <div id="top-layer" class="layer">
-                <img id="top-img" src="https://placehold.co/200x300?text=Camisa" alt="Camisa">
-            </div>
-            <!-- Parte de Baixo -->
-            <div id="bottom-layer" class="layer">
-                <img id="bottom-img" src="https://placehold.co/200x300?text=Calca" alt="Calça">
-            </div>
+        <!-- Imagem de cima (camisa) -->
+        <div class="image-container">
+            <img id="top-img" src="assets/top1.jpg" alt="Parte de cima">
         </div>
 
-        <!-- Botões para trocar roupas -->
+        <!-- Imagem de baixo (calça) -->
+        <div class="image-container">
+            <img id="bottom-img" src="assets/bottom1.jpg" alt="Parte de baixo">
+        </div>
+
+        <!-- Botões para mudar as imagens -->
         <div class="options-container">
-            <!-- Parte de Cima -->
             <div class="options">
-                <h3>Parte de Cima</h3>
-                <button onclick="changeTop('https://placehold.co/200x300?text=Camisa+1')">Camisa 1</button>
-                <button onclick="changeTop('https://placehold.co/200x300?text=Camisa+2')">Camisa 2</button>
+                <h3>Camisas</h3>
+                <button onclick="changeTop('assets/top1.jpg')">Camisa 1</button>
+                <button onclick="changeTop('assets/top2.jpg')">Camisa 2</button>
+                <button onclick="changeTop('assets/top3.jpg')">Camisa 3</button>
             </div>
-            <!-- Parte de Baixo -->
+
             <div class="options">
-                <h3>Parte de Baixo</h3>
-                <button onclick="changeBottom('https://placehold.co/200x300?text=Calca+1')">Calça 1</button>
-                <button onclick="changeBottom('https://placehold.co/200x300?text=Calca+2')">Calça 2</button>
+                <h3>Calças</h3>
+                <button onclick="changeBottom('assets/bottom1.jpg')">Calça 1</button>
+                <button onclick="changeBottom('assets/bottom2.jpg')">Calça 2</button>
+                <button onclick="changeBottom('assets/bottom3.jpg')">Calça 3</button>
             </div>
         </div>
     </div>
