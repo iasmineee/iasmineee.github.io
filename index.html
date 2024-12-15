@@ -2,33 +2,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armário Virtual</title>
+    <title>Armário Virtual da Cher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Armário da Cher</h1>
+        <h1>Armário Virtual da Cher</h1>
+        
+        <!-- Área onde as roupas aparecem -->
         <div class="avatar-container">
-            <!-- Área das imagens -->
+            <!-- Parte de Cima -->
             <div id="top-layer" class="layer">
-                <img id="top-img" src="camisa1.png" alt="Camisa">
+                <img id="top-img" src="https://placehold.co/200x300?text=Camisa" alt="Camisa">
             </div>
+            <!-- Parte de Baixo -->
             <div id="bottom-layer" class="layer">
-                <img id="bottom-img" src="calca1.png" alt="Calça">
+                <img id="bottom-img" src="https://placehold.co/200x300?text=Calca" alt="Calça">
             </div>
         </div>
 
-        <!-- Botões de troca -->
+        <!-- Botões para trocar roupas -->
         <div class="options-container">
+            <!-- Parte de Cima -->
             <div class="options">
                 <h3>Parte de Cima</h3>
-                <button onclick="changeTop('camisa1.png')">Camisa 1</button>
-                <button onclick="changeTop('camisa2.png')">Camisa 2</button>
+                <button onclick="changeTop('https://placehold.co/200x300?text=Camisa+1')">Camisa 1</button>
+                <button onclick="changeTop('https://placehold.co/200x300?text=Camisa+2')">Camisa 2</button>
             </div>
+            <!-- Parte de Baixo -->
             <div class="options">
                 <h3>Parte de Baixo</h3>
-                <button onclick="changeBottom('calca1.png')">Calça 1</button>
-                <button onclick="changeBottom('calca2.png')">Calça 2</button>
+                <button onclick="changeBottom('https://placehold.co/200x300?text=Calca+1')">Calça 1</button>
+                <button onclick="changeBottom('https://placehold.co/200x300?text=Calca+2')">Calça 2</button>
             </div>
         </div>
     </div>
