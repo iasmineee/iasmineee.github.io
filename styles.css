@@ -1,61 +1,68 @@
-/* Define a fonte padrão e o fundo do corpo */
+/* Estilos gerais para o corpo */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('assets/leopard-pattern.jpg'); /* Caminho correto da imagem de fundo */
-    background-size: cover;  /* Garante que a imagem cubra toda a tela */
-    background-position: center;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    text-align: center;
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+    height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* 3 colunas (1 para a esquerda, 3 para o centro, 1 para a direita) */
+    grid-template-rows: 100%; /* A altura das linhas é 100% da tela */
 }
 
-/* Container que vai centralizar o conteúdo da página */
-.container {
-    max-width: 900px;
-    margin: 20px auto;
+/* Área 1 e 3 (esquerda e direita) */
+.left, .right {
+    background-image: url('assets/leopard-pattern.jpg'); /* A mesma imagem de fundo para a esquerda e direita */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* As áreas laterais ocupam 100% da altura da tela */
 }
 
-/* Título principal da página */
+/* Área 2 (central) onde o conteúdo vai ficar */
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade para destacar o conteúdo */
+    padding: 20px;
+}
+
+/* Título */
 h1 {
     margin-bottom: 20px;
+    color: #333; /* Cor do título */
 }
 
-/* Contêiner para as imagens das roupas (parte de cima e parte de baixo) */
+/* Contêiner das imagens das roupas */
 .image-container {
     margin: 20px;
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da tela */
-    text-align: center; /* Centraliza a imagem dentro do contêiner */
+    text-align: center;
 }
 
 /* Estilo para as imagens das roupas */
 img {
-    max-width: 300px; /* Limita o tamanho máximo da imagem para 300px */
-    width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 300px; /* Limita a largura das imagens */
+    width: 100%; /* A imagem vai ocupar toda a largura disponível */
+    height: auto;
     border-radius: 10px;
 }
 
-/* Para a imagem da calça, se precisar de um ajuste específico */
-#bottom-img {
-    max-width: 300px; /* Limita o tamanho máximo da imagem da calça */
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* Contêiner para os botões de opções (roupa de cima e de baixo) */
+/* Contêiner dos botões de opções */
 .options-container {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap; /* Adiciona wrap para responsividade */
+    flex-wrap: wrap; /* Ajusta os botões em várias linhas se necessário */
+    margin-top: 20px;
 }
 
-/* Estilo para a seção das opções */
+/* Estilo para as opções de roupas */
 .options {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* Estilo para os botões */
@@ -68,26 +75,15 @@ button {
     margin-bottom: 10px;
     border-radius: 5px;
     display: block;
-    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+    width: 100%; /* Os botões ocupam toda a largura disponível */
 }
 
-/* Estilo ao passar o mouse sobre os botões */
+/* Estilo dos botões ao passar o mouse */
 button:hover {
     background-color: #0056b3;
 }
 
-/* Media query para dispositivos menores (celulares, por exemplo) */
+/* Media query para telas pequenas (celulares) */
 @media (max-width: 600px) {
     .options-container {
-        flex-direction: column; /* Empilha as opções verticalmente */
-        gap: 10px; /* Reduz o espaço entre as opções */
-    }
-
-    .options {
-        width: 100%; /* Garante que as opções ocupem toda a largura disponível */
-    }
-
-    button {
-        width: auto; /* Faz os botões voltarem ao tamanho natural */
-    }
-}
+        flex-direction: column; /* Botões empilham-se e
