@@ -48,14 +48,14 @@ body.show-content {
     background-repeat: no-repeat;
 }
 
-/* Retângulo vertical no meio da tela */
+/* Retângulo central no meio da tela */
 .center-rectangle {
     position: fixed;
-    top: 20px; /* Ajusta a distância da margem superior */
-    bottom: 20px; /* Ajusta a distância da margem inferior */
+    top: 10px; /* Ajusta a distância da margem superior */
+    bottom: 10px; /* Ajusta a distância da margem inferior */
     left: 50%; /* Coloca no centro */
     transform: translateX(-50%);
-    width: 80%; /* Ajuste para ocupar 80% da largura da tela */
+    width: 9cm; /* Definir largura fixa em 9cm */
     background-color: white;
     z-index: 2;
     display: flex;
@@ -68,7 +68,7 @@ body.show-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 50%; /* Divide o retângulo em 2 quadrados verticais */
     margin-bottom: 10px;
 }
 
