@@ -48,4 +48,19 @@ function navigate(type, direction) {
 // Função para criar o look automaticamente
 function autoBrowse() {
     const randomTop = Math.floor(Math.random() * 6);
-    const randomBottom = Mat
+    const randomBottom = Math.floor(Math.random() * 6);
+    document.getElementById('top-img').src = `https://via.placeholder.com/300x300.png?text=Top+${randomTop + 1}`;
+    document.getElementById('bottom-img').src = `https://via.placeholder.com/300x300.png?text=Calça+${randomBottom + 1}`;
+}
+
+// Função para "vestir" o look
+function dressMe() {
+    const topImg = document.getElementById('top-img').src;
+    const bottomImg = document.getElementById('bottom-img').src;
+
+    if (topImg && bottomImg) {
+        alert('Look escolhido!');
+    } else {
+        alert('MIS-MATCH: Complete seu look!');
+    }
+}
