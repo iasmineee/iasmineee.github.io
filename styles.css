@@ -1,4 +1,36 @@
-/* Tela de carregamento */
+/* Definindo o estilo para o fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/leopard-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Garantir que o fundo ocupe toda a altura da tela */
+    transition: background 1s ease-in-out; /* Transition suave para o fundo */
+}
+
+/* Barra preta no topo e no fundo */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Aproximadamente 1cm em telas padrão */
+    background-color: black;
+    z-index: 1000; /* Garante que a barra apareça sobre outros conteúdos */
+}
+
+body::before {
+    top: 0; /* Barra no topo */
+}
+
+body::after {
+    bottom: 0; /* Barra na parte inferior */
+}
+
+/* Tela de carregamento com GIF */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -9,7 +41,7 @@
     justify-content: center;
     align-items: center;
     background-color: white; /* fundo branco para o carregamento */
-    z-index: 10; /* Certifique-se de que o GIF esteja sobre o conteúdo */
+    z-index: 10; /* Garante que o GIF esteja sobre o conteúdo */
 }
 
 /* Imagem do GIF ocupando a tela inteira */
@@ -19,19 +51,7 @@
     object-fit: cover;
 }
 
-/* Quando o GIF de carregamento terminar, o conteúdo principal aparece com fundo de leopardo */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('assets/leopard-pattern.jpg'); /* A imagem de fundo do leopardo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    transition: background 1s ease-in-out; /* Transition suave para o fundo */
-}
-
-/* Estilos para o conteúdo principal */
+/* O conteúdo do site começa aqui */
 .main-content {
     display: none; /* Começa oculto até que o loading termine */
     z-index: 1; /* Garante que o conteúdo fique atrás do GIF inicialmente */
