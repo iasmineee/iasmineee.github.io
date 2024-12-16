@@ -20,6 +20,7 @@ body::before, body::after {
     height: 1vh; /* Ajustando para 1% da altura da tela */
     background-color: black;
     z-index: 1000; /* Garante que a barra apareça sobre outros conteúdos */
+    display: none; /* Inicialmente escondido */
 }
 
 body::before {
@@ -65,9 +66,4 @@ body::after {
 h1 {
     font-size: 36px;
     color: white;
-}
-
-/* Define o estado do body após o GIF desaparecer */
-body.loaded {
-    background-image: url('assets/leopard-pattern.jpg');
 }
