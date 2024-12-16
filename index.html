@@ -7,42 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra preta superior -->
-    <div class="bar bar-top"></div>
+    <!-- GIF inicial -->
+    <div id="gif-container">
+        <img src="assets/hangers.gif" alt="Loading...">
+    </div>
 
-    <!-- GIF de carregamento -->
-    <img id="gif" src="assets/hangers.gif" alt="Carregando..." />
+    <!-- Conteúdo principal -->
+    <div id="main-content" class="hidden">
+        <!-- Barra preta superior -->
+        <div class="bar bar-top">
+            <div class="scrolling-text">Yaz's Closet Yaz's Closet Yaz's Closet Yaz's Closet</div>
+        </div>
 
-    <!-- Barra preta inferior -->
-    <div class="bar bar-bottom"></div>
+        <!-- Retângulo central -->
+        <div class="center-container">
+            <!-- Quadrado superior (tops) -->
+            <div class="square">
+                <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Top">
+                <div class="navigation">
+                    <button onclick="navigateTop(-1)">&#9664;</button>
+                    <span>TOPS</span>
+                    <button onclick="navigateTop(1)">&#9654;</button>
+                </div>
+            </div>
 
-    <!-- Retângulo central -->
-    <div class="center-rectangle">
-        <!-- Quadrado de cima com as opções de tops -->
-        <div class="square">
-            <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Top">
-            <div class="options">
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+1')">Top 1</button>
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+2')">Top 2</button>
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+3')">Top 3</button>
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+4')">Top 4</button>
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+5')">Top 5</button>
-                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+6')">Top 6</button>
+            <!-- Quadrado inferior (calças) -->
+            <div class="square">
+                <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Bottom">
+                <div class="navigation">
+                    <button onclick="navigateBottom(-1)">&#9664;</button>
+                    <span>BOTTOMS</span>
+                    <button onclick="navigateBottom(1)">&#9654;</button>
+                </div>
             </div>
         </div>
 
-        <!-- Quadrado de baixo com as opções de calças -->
-        <div class="square">
-            <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Bottom">
-            <div class="options">
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+1')">Calça 1</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+2')">Calça 2</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+3')">Calça 3</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+4')">Calça 4</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+5')">Calça 5</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+6')">Calça 6</button>
-            </div>
-        </div>
+        <!-- Barra preta inferior -->
+        <div class="bar bar-bottom"></div>
     </div>
 
     <script src="script.js"></script>
