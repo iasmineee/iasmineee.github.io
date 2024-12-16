@@ -11,5 +11,7 @@ window.addEventListener('load', () => {
         // Exibe as barras
         document.body.classList.add('loaded'); // A barra superior e inferior aparecem
 
+        // Mostra o texto na barra superior
+        document.getElementById('top-bar-text').style.display = 'block'; // Mostra o texto
     }, 1000); // Tempo do gif (1 segundo)
 });
