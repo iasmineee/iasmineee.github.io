@@ -7,29 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Divisão do Layout em 3 áreas -->
-    <div class="left"></div> <!-- Área esquerda (com fundo de leopardo) -->
-    
-    <div class="center">
-        <!-- Imagem da parte de cima (camisa) -->
-        <div class="image-container">
-            <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Camisa+1" alt="Parte de cima">
-        </div>
-
-        <!-- Imagem da parte de baixo (calça) -->
-        <div class="image-container">
-            <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Calça+1" alt="Parte de baixo">
-        </div>
-
-        <!-- Botões de interação -->
-        <div class="actions">
-            <button id="browse-btn">Browse para Look Automático</button>
-            <button id="dress-me-btn" onclick="dressMe()">Dress Me</button>
-        </div>
+    <!-- Tela de Abertura -->
+    <div id="opening-screen" class="full-screen">
+        <img src="https://i.pinimg.com/736x/e2/27/82/e22782e9816f960e276ba10a254ff912.jpg" alt="Imagem Inicial">
     </div>
 
-    <div class="right"></div> <!-- Área direita (com fundo de leopardo) -->
-    
+    <!-- Tela de Fundo Leopardo -->
+    <div id="background-screen" class="full-screen hidden"></div>
+
+    <!-- Conteúdo Principal -->
+    <div id="main-content" class="hidden">
+        <div class="left"></div> <!-- Lado esquerdo (padrão leopardo) -->
+
+        <!-- Retângulo central -->
+        <div class="center">
+            <div class="top-box">
+                <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Camisa" alt="Parte de cima">
+                <div class="arrows">
+                    <button onclick="moveLeft('top')">&lt;&lt;</button>
+                    <button onclick="moveRight('top')">&gt;&gt;</button>
+                </div>
+            </div>
+
+            <div class="bottom-box">
+                <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Calça" alt="Parte de baixo">
+                <div class="arrows">
+                    <button onclick="moveLeft('bottom')">&lt;&lt;</button>
+                    <button onclick="moveRight('bottom')">&gt;&gt;</button>
+                </div>
+            </div>
+
+            <!-- Botões de Controle -->
+            <div class="button-container">
+                <button id="auto-browse" onclick="autoBrowse()">AUTO BROWSE</button>
+                <button id="dress-me" onclick="dressMe()">DRESS ME</button>
+            </div>
+        </div>
+
+        <div class="right"></div> <!-- Lado direito (padrão leopardo) -->
+    </div>
+
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
