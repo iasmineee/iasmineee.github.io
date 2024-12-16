@@ -8,22 +8,15 @@ function changeBottom(image) {
     document.getElementById('bottom-img').src = image;
 }
 
-// Função para exibir o look final após clicar em "Dress Me"
+// Função para redirecionar para a nova página com as imagens selecionadas
 function dressMe() {
+    // Obtém as URLs das imagens selecionadas
     var topImg = document.getElementById('top-img').src;
     var bottomImg = document.getElementById('bottom-img').src;
 
-    document.getElementById('avatar-top').src = topImg;
-    document.getElementById('avatar-bottom').src = bottomImg;
+    // Cria a URL com parâmetros query, passando as imagens como valores
+    var url = "lookfinal.html?top=" + encodeURIComponent(topImg) + "&bottom=" + encodeURIComponent(bottomImg);
 
-    document.getElementById('avatar-container').style.display = 'block'; // Exibe o look final
-    document.getElementById('dress-me-btn').style.display = 'none'; // Esconde o botão "Dress Me"
-    document.getElementById('browse-btn').style.display = 'none'; // Esconde o botão "Browse"
-}
-
-// Função para reiniciar o processo e esconder o look final
-function browse() {
-    document.getElementById('avatar-container').style.display = 'none'; // Esconde o look final
-    document.getElementById('dress-me-btn').style.display = 'inline-block'; // Exibe o botão "Dress Me"
-    document.getElementById('browse-btn').style.display = 'inline-block'; // Exibe o botão "Browse"
+    // Redireciona para a nova página
+    window.location.href = url;
 }
