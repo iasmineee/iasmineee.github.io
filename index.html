@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Tela inicial com GIF -->
-    <div id="opening-screen" class="full-screen">
-        <img src="https://images.squarespace-cdn.com/content/v1/5fce7107090b7c3070ce9f86/1607887676961-UWEPUOAFZX2JZIJRJ77I/Casey-Hollister-Clueless-Closet-Hangers.gif" 
-             alt="Opening GIF">
+    <!-- Tela inicial com o GIF -->
+    <div id="loading-screen">
+        <img src="assets/hangers.gif" alt="Opening GIF">
     </div>
 
-    <!-- Tela principal -->
-    <div id="main-screen" class="hidden">
-        <div class="container">
-            <h1>Yaz's Closet</h1>
-
-            <!-- Retângulo central -->
-            <div id="central-box">
-                <!-- Quadrado superior para tops -->
-                <div id="top-box" class="box">
-                    <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Top selecionado">
+    <!-- Layout principal -->
+    <div id="main-content" style="display: none;">
+        <div class="background">
+            <div class="center">
+                <div class="top-box">
+                    <div class="image-display">
+                        <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Parte de cima">
+                    </div>
                     <div class="arrows">
-                        <button onclick="navigate('top', 'left')">&#8592;</button>
-                        <button onclick="navigate('top', 'right')">&#8594;</button>
+                        <button onclick="changeTop(-1)">&#9664;</button>
+                        <button onclick="changeTop(1)">&#9654;</button>
                     </div>
                 </div>
 
-                <!-- Quadrado inferior para calças -->
-                <div id="bottom-box" class="box">
-                    <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Calça+1" alt="Calça selecionada">
+                <div class="bottom-box">
+                    <div class="image-display">
+                        <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Parte de baixo">
+                    </div>
                     <div class="arrows">
-                        <button onclick="navigate('bottom', 'left')">&#8592;</button>
-                        <button onclick="navigate('bottom', 'right')">&#8594;</button>
+                        <button onclick="changeBottom(-1)">&#9664;</button>
+                        <button onclick="changeBottom(1)">&#9654;</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Botões de ação -->
-            <div class="buttons">
-                <button id="auto-browse" onclick="autoBrowse()">AUTO BROWSE</button>
-                <button id="dress-me" onclick="dressMe()">DRESS ME</button>
+                <div class="buttons-container">
+                    <button onclick="autoBrowse()">AUTO BROWSE</button>
+                    <button onclick="dressMe()">DRESS ME</button>
+                </div>
             </div>
         </div>
     </div>
