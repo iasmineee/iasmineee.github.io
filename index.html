@@ -7,38 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Tela de carregamento com o GIF -->
-    <div id="loading-screen">
-        <img src="assets/hangers.gif" alt="Loading">
+    <!-- Barra de cima (invisível inicialmente) -->
+    <div class="top-bar">
+        <div class="scrolling-text">Yaz's Closet</div>
     </div>
 
-    <!-- Barra superior com texto animado -->
-    <div id="top-bar-text">Yaz's Closet</div>
-
-    <!-- Conteúdo principal -->
-    <div class="main-content">
-        <div class="center-rectangle">
-            <!-- Quadrado superior para os tops -->
-            <div class="top-square">
-                <button>Camiseta 1</button>
-                <button>Camiseta 2</button>
-                <button>Camiseta 3</button>
-                <button>Camiseta 4</button>
-                <button>Camiseta 5</button>
-                <button>Camiseta 6</button>
-            </div>
-
-            <!-- Quadrado inferior para as calças -->
-            <div class="bottom-square">
-                <button>Calça 1</button>
-                <button>Calça 2</button>
-                <button>Calça 3</button>
-                <button>Calça 4</button>
-                <button>Calça 5</button>
-                <button>Calça 6</button>
-            </div>
-        </div>
+    <!-- Tela inicial com o GIF de carregamento -->
+    <div class="gif-container">
+        <img src="assets/hangers.gif" alt="Loading GIF" class="loading-gif">
     </div>
+
+    <!-- Fundo de leopardo, visível após o gif -->
+    <div class="content">
+        <!-- Área do conteúdo principal -->
+    </div>
+
+    <!-- Barra de baixo (invisível inicialmente) -->
+    <div class="bottom-bar"></div>
 
     <script src="script.js"></script>
 </body>
