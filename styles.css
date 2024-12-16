@@ -1,118 +1,103 @@
-/* Definindo o estilo para o fundo da página */
+/* Inicializa o corpo da página com o fundo de leopardo */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh; /* Garante que o fundo ocupe toda a tela */
+}
+
+/* Estilo do GIF de carregamento (hangers.gif) */
+.gif-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all 0.75s ease-in-out; /* Transição suave para a mudança de conteúdo */
+}
+
+.loading-gif {
+    width: 100%;
+    height: auto;
+}
+
+/* Barra superior invisível inicialmente */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 2cm; /* Ajuste a altura conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease; /* Transição suave quando aparecer */
+}
+
+.scrolling-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; /* Efeito de rolagem para o texto */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Barra inferior invisível inicialmente */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 2cm; /* Ajuste a altura conforme necessário */
+    z-index: 2;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1s ease; /* Transição suave quando aparecer */
+}
+
+/* Fundo de leopardo */
+.content {
     background-image: url('assets/leopard-pattern.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Garantir que o fundo ocupe toda a altura da tela */
-    transition: background 1s ease-in-out; /* Transition suave para o fundo */
-}
-
-/* Barra preta no topo e no fundo */
-body::before, body::after {
-    content: '';
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 1cm; /* 1 cm de altura para a barra */
-    background-color: black;
-    z-index: 1000; /* Garante que a barra apareça sobre outros conteúdos */
-    display: none; /* Inicialmente escondido */
-}
-
-body::before {
-    top: 0; /* Barra no topo */
-}
-
-body::after {
-    bottom: 0; /* Barra na parte inferior */
-}
-
-/* Animação para o texto passando na barra superior */
-#top-bar-text {
     position: absolute;
     top: 0;
-    left: 100%;
-    white-space: nowrap;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    animation: slideText 10s linear infinite;
-}
-
-@keyframes slideText {
-    0% {
-        left: 100%;
-    }
-    100% {
-        left: -100%;
-    }
-}
-
-/* Tela de carregamento com GIF */
-#loading-screen {
-    position: fixed;
-    top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; /* fundo branco para o carregamento */
-    z-index: 10; /* Garante que o GIF esteja sobre o conteúdo */
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: opacity 1s ease;
+    opacity: 0; /* Inicialmente invisível */
 }
 
-/* Imagem do GIF ocupando a tela inteira */
-#loading-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Quando a transição do GIF terminar, tornamos o fundo visível e as barras aparecem */
+.show-content .gif-container {
+    opacity: 0; /* Esconde o GIF */
 }
 
-/* O conteúdo do site começa aqui */
-.main-content {
-    display: none; /* Começa oculto até que o loading termine */
-    z-index: 1; /* Garante que o conteúdo fique atrás do GIF inicialmente */
+.show-content .content {
+    opacity: 1; /* Torna o conteúdo visível */
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Retângulo central dividido em 2 quadrados */
-.center-rectangle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px; /* Ajuste para evitar que fique em cima das barras */
-}
-
-.top-square, .bottom-square {
-    width: 100%;
-    height: 50vh; /* Cada quadrado ocupa 50% da altura da tela */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: block;
-    width: 200px;
-}
-
-button:hover {
-    background-color: #0056b3;
+.show-content .top-bar,
+.show-content .bottom-bar {
+    opacity: 1; /* Torna as barras visíveis */
 }
