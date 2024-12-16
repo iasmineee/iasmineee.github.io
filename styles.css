@@ -51,8 +51,8 @@ body.show-content {
 /* Retângulo vertical no meio da tela */
 .center-rectangle {
     position: fixed;
-    top: 10px; /* Ajusta a distância da margem superior */
-    bottom: 10px; /* Ajusta a distância da margem inferior */
+    top: 20px; /* Ajusta a distância da margem superior */
+    bottom: 20px; /* Ajusta a distância da margem inferior */
     left: 50%; /* Coloca no centro */
     transform: translateX(-50%);
     width: 80%; /* Ajuste para ocupar 80% da largura da tela */
