@@ -1,29 +1,22 @@
-// Exibe o fundo de leopardo após o GIF inicial
+// Aguarda 1 segundo e exibe a tela principal
 window.onload = function () {
-    setTimeout(function () {
-        document.getElementById("opening-screen").classList.add("hidden");
-        document.getElementById("main-screen").classList.remove("hidden");
-    }, 950); // 0.95 segundos para o GIF
+    setTimeout(() => {
+        document.getElementById('opening-screen').classList.add('hidden');
+        document.getElementById('main-screen').classList.remove('hidden');
+    }, 1000); // 1 segundo (1000ms)
 };
 
-// Funções de navegação
+// Função para navegar entre opções de roupas
 function navigate(type, direction) {
-    const topImages = [
-        'https://via.placeholder.com/300x300.png?text=Top+1',
-        'https://via.placeholder.com/300x300.png?text=Top+2',
-        'https://via.placeholder.com/300x300.png?text=Top+3'
-    ];
+    console.log(`Navegando ${direction} nas opções de ${type}`);
+}
 
-    const bottomImages = [
-        'https://via.placeholder.com/300x300.png?text=Calça+1',
-        'https://via.placeholder.com/300x300.png?text=Calça+2',
-        'https://via.placeholder.com/300x300.png?text=Calça+3'
-    ];
+// Função para criar um look automático
+function autoBrowse() {
+    console.log("Criando look automático...");
+}
 
-    let imgArray, imgElement;
-
-    if (type === 'top') {
-        imgArray = topImages;
-        imgElement = document.getElementById('top-img');
-    } else if (type === 'bottom') {
-        imgArray = bott
+// Função para confirmar look
+function dressMe() {
+    console.log("Look finalizado!");
+}
