@@ -44,3 +44,8 @@ function navigate(type, direction) {
     }
     imgElement.src = imgArray[currentIndex];
 }
+
+// Função para criar o look automaticamente
+function autoBrowse() {
+    const randomTop = Math.floor(Math.random() * 6);
+    const randomBottom = Mat
