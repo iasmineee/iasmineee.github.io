@@ -1,5 +1,5 @@
 window.onload = function () {
-    // Mostra o fundo de leopardo após a animação do GIF
+    // Mostra o fundo de leopardo após o GIF
     setTimeout(function () {
         document.getElementById("opening-screen").classList.add("hidden");
         document.getElementById("background-screen").classList.remove("hidden");
