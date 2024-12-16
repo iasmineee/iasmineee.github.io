@@ -1,22 +1,67 @@
-// Aguarda 1 segundo e exibe a tela principal
-window.onload = function () {
-    setTimeout(() => {
-        document.getElementById('opening-screen').classList.add('hidden');
-        document.getElementById('main-screen').classList.remove('hidden');
-    }, 1000); // 1 segundo (1000ms)
-};
+// Funções para alterar as imagens
+function changeTop(direction) {
+    const topImages = [
+        "https://via.placeholder.com/300x300.png?text=Top+1",
+        "https://via.placeholder.com/300x300.png?text=Top+2",
+        "https://via.placeholder.com/300x300.png?text=Top+3"
+    ];
 
-// Função para navegar entre opções de roupas
-function navigate(type, direction) {
-    console.log(`Navegando ${direction} nas opções de ${type}`);
+    let currentTop = topImages.indexOf(document.getElementById('top-img').src);
+
+    currentTop += direction;
+
+    if (currentTop >= topImages.length) currentTop = 0;
+    if (currentTop < 0) currentTop = topImages.length - 1;
+
+    document.getElementById('top-img').src = topImages[currentTop];
 }
 
-// Função para criar um look automático
+function changeBottom(direction) {
+    const bottomImages = [
+        "https://via.placeholder.com/300x300.png?text=Bottom+1",
+        "https://via.placeholder.com/300x300.png?text=Bottom+2",
+        "https://via.placeholder.com/300x300.png?text=Bottom+3"
+    ];
+
+    let currentBottom = bottomImages.indexOf(document.getElementById('bottom-img').src);
+
+    currentBottom += direction;
+
+    if (currentBottom >= bottomImages.length) currentBottom = 0;
+    if (currentBottom < 0) currentBottom = bottomImages.length - 1;
+
+    document.getElementById('bottom-img').src = bottomImages[currentBottom];
+}
+
+// Função para o Auto Browse
 function autoBrowse() {
-    console.log("Criando look automático...");
+    const topImages = [
+        "https://via.placeholder.com/300x300.png?text=Top+1",
+        "https://via.placeholder.com/300x300.png?text=Top+2",
+        "https://via.placeholder.com/300x300.png?text=Top+3"
+    ];
+    const bottomImages = [
+        "https://via.placeholder.com/300x300.png?text=Bottom+1",
+        "https://via.placeholder.com/300x300.png?text=Bottom+2",
+        "https://via.placeholder.com/300x300.png?text=Bottom+3"
+    ];
+
+    const randomTop = Math.floor(Math.random() * topImages.length);
+    const randomBottom = Math.floor(Math.random() * bottomImages.length);
+
+    document.getElementById('top-img').src = topImages[randomTop];
+    document.getElementById('bottom-img').src = bottomImages[randomBottom];
 }
 
-// Função para confirmar look
+// Função para o Dress Me
 function dressMe() {
-    console.log("Look finalizado!");
+    document.getElementById('main-content').innerHTML = `<h2>Your look is ready!</h2>`;
 }
+
+// Aguardar 0.75 segundos antes de exibir o conteúdo principal
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+    }, 750); // 0.75 segundos de delay
+};
