@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Final</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Exibe o look final com a imagem da parte de cima e de baixo -->
+    <div class="final-look">
+        <h1>Look Final:</h1>
+
+        <div class="image-container">
+            <img id="final-top" src="" alt="Parte de cima final">
+        </div>
+
+        <div class="image-container">
+            <img id="final-bottom" src="" alt="Parte de baixo final">
+        </div>
+    </div>
+
+    <script>
+        // Função para obter os parâmetros da URL
+        function getQueryParams() {
+            var params = new URLSearchParams(window.location.search);
+            return {
+                top: params.get('top'),
+                bottom: params.get('bottom')
+            };
+        }
+
+        // Função para exibir as imagens na nova página
+        function displayFinalLook() {
+            var params = getQueryParams();
+
+            // Se houver uma imagem para a parte de cima, exibe
+            if (params.top) {
+                document.getElementById('final-top').src = params.top;
+            }
+
+            // Se houver uma imagem para a parte de baixo, exibe
+            if (params.bottom) {
+                document.getElementById('final-bottom').src = params.bottom;
+            }
+        }
+
+        // Chama a função quando a página for carregada
+        window.onload = displayFinalLook;
+    </script>
+</body>
+</html>
