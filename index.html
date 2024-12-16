@@ -7,40 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Tela inicial com o GIF -->
+    <!-- Tela de Carregamento com GIF -->
     <div id="loading-screen">
-        <img src="assets/Hangers.gif" alt="Opening GIF">
+        <img src="assets/hangers.gif" alt="Loading GIF">
     </div>
 
-    <!-- Layout principal -->
-    <div id="main-content" style="display: none;">
-        <div class="background">
-            <div class="center">
-                <div class="top-box">
-                    <div class="image-display">
-                        <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Parte de cima">
-                    </div>
-                    <div class="arrows">
-                        <button onclick="changeTop(-1)">&#9664;</button>
-                        <button onclick="changeTop(1)">&#9654;</button>
-                    </div>
-                </div>
-
-                <div class="bottom-box">
-                    <div class="image-display">
-                        <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Parte de baixo">
-                    </div>
-                    <div class="arrows">
-                        <button onclick="changeBottom(-1)">&#9664;</button>
-                        <button onclick="changeBottom(1)">&#9654;</button>
-                    </div>
-                </div>
-
-                <div class="buttons-container">
-                    <button onclick="autoBrowse()">AUTO BROWSE</button>
-                    <button onclick="dressMe()">DRESS ME</button>
-                </div>
-            </div>
+    <!-- O conteúdo do site começa aqui -->
+    <div class="main-content">
+        <!-- O layout do seu site vai aqui -->
+        <!-- Como os retângulos e os botões para 'Browse' e 'Dress Me' -->
+        <div class="container">
+            <h1>Yaz's Closet</h1>
+            <!-- Aqui entra o resto do seu conteúdo -->
         </div>
     </div>
 
