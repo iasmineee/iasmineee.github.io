@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Tela cheia para a tela inicial e tela de fundo */
+/* Tela cheia para o GIF de abertura */
 .full-screen {
     width: 100vw;
     height: 100vh;
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
     overflow: hidden;
 }
 
