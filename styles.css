@@ -1,78 +1,60 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://via.placeholder.com/1920x1080.png?text=Leopard+Print'); /* Substitua pelo seu fundo de leopardo */
+    background-image: url('assets/leopard-pattern.jpg'); /* Caminho correto para a imagem */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.container {
-    max-width: 900px;
-    margin: 20px auto;
+.left, .right {
+    width: 25%;
+    height: 100vh;
+    background-image: url('assets/leopard-pattern.jpg'); /* Utilizando a imagem de leopardo para as laterais */
+    background-size: cover;
+    background-position: center;
+}
+
+.center {
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    text-align: center;
+    padding: 20px;
 }
 
 .image-container {
-    margin: 20px;
-    max-width: 100%;
-    text-align: center;
+    margin: 20px 0;
 }
 
 img {
-    max-width: 300px; /* Limita o tamanho máximo da imagem para 300px */
+    max-width: 300px;
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-.options-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.options {
-    text-align: left;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
 
 .actions {
     margin-top: 20px;
 }
 
-#avatar-container {
-    margin-top: 30px;
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.left, .right {
-    width: 20%;
-    background-image: url('https://via.placeholder.com/1920x1080.png?text=Leopard+Pattern'); /* Fundo de leopardo */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    float: left;
-}
-
-.center {
-    width: 60%;
-    display: inline-block;
-    text-align: center;
-    padding: 20px;
+button:hover {
+    background-color: #0056b3;
 }
