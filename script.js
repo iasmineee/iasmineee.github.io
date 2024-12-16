@@ -1,12 +1,15 @@
-window.onload = () => {
+// Aguarda 1 segundo para exibir o conteúdo e as barras
+window.addEventListener('load', () => {
+    // Exibe o GIF por 1 segundo
     setTimeout(() => {
-        // Remover a tela de carregamento após 1 segundo (1000ms)
-        document.getElementById("loading-screen").style.display = "none";
+        // Remove a tela de carregamento (GIF)
+        document.getElementById('loading-screen').style.display = 'none';
         
-        // Mostrar o conteúdo principal
-        document.querySelector(".main-content").style.display = "block";
+        // Exibe o conteúdo principal
+        document.querySelector('.main-content').style.display = 'block';
+        
+        // Exibe as barras
+        document.body.classList.add('loaded'); // A barra superior e inferior aparecem
 
-        // Adicionar uma classe 'loaded' ao body para aplicar o fundo
-        document.body.classList.add("loaded");
-    }, 1000); // 1 segundo de atraso
-};
+    }, 1000); // Tempo do gif (1 segundo)
+});
