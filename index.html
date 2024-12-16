@@ -10,33 +10,38 @@
     <!-- Barra preta superior -->
     <div class="bar bar-top"></div>
 
-    <!-- GIF de carregamento (vai ocupar a tela toda) -->
-    <img id="gif" src="assets/hangers.gif" alt="Loading">
+    <!-- GIF de carregamento -->
+    <img id="gif" src="assets/hangers.gif" alt="Carregando..." />
 
     <!-- Barra preta inferior -->
     <div class="bar bar-bottom"></div>
 
-    <!-- Retângulo central no meio da tela -->
+    <!-- Retângulo central -->
     <div class="center-rectangle">
-        <!-- Quadrado de cima (com opções de tops) -->
+        <!-- Quadrado de cima com as opções de tops -->
         <div class="square">
-            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+1')">Top 1</button>
-            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+2')">Top 2</button>
-            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+3')">Top 3</button>
+            <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Top">
+            <div class="options">
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+1')">Top 1</button>
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+2')">Top 2</button>
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+3')">Top 3</button>
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+4')">Top 4</button>
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+5')">Top 5</button>
+                <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+6')">Top 6</button>
+            </div>
         </div>
 
-        <!-- Setas de navegação para os quadrados -->
+        <!-- Quadrado de baixo com as opções de calças -->
         <div class="square">
-            <button class="arrow-button">←</button>
-            <button class="arrow-button">→</button>
-            <button class="arrow-button">↻</button>
-        </div>
-
-        <!-- Quadrado de baixo (com opções de calças) -->
-        <div class="square">
-            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+1')">Bottom 1</button>
-            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+2')">Bottom 2</button>
-            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+3')">Bottom 3</button>
+            <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Bottom">
+            <div class="options">
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+1')">Calça 1</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+2')">Calça 2</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+3')">Calça 3</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+4')">Calça 4</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+5')">Calça 5</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+6')">Calça 6</button>
+            </div>
         </div>
     </div>
 
