@@ -7,23 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de cima (invisível inicialmente) -->
-    <div class="top-bar">
-        <div class="scrolling-text">Yaz's Closet</div>
-    </div>
+    <!-- Barra preta superior e inferior -->
+    <div class="bar bar-top"></div>
+    <div class="bar bar-bottom"></div>
 
-    <!-- Tela inicial com o GIF de carregamento -->
-    <div class="gif-container">
-        <img src="assets/hangers.gif" alt="Loading GIF" class="loading-gif">
-    </div>
+    <!-- GIF de carregamento -->
+    <img id="gif" src="assets/hangers.gif" alt="Loading">
 
-    <!-- Fundo de leopardo, visível após o gif -->
-    <div class="content">
-        <!-- Área do conteúdo principal -->
-    </div>
+    <!-- Retângulo central -->
+    <div class="center-rectangle">
+        <!-- Quadrado de cima (com opções de tops) -->
+        <div class="square">
+            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+1')">Top 1</button>
+            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+2')">Top 2</button>
+            <button onclick="changeTop('https://via.placeholder.com/300x300.png?text=Top+3')">Top 3</button>
+        </div>
 
-    <!-- Barra de baixo (invisível inicialmente) -->
-    <div class="bottom-bar"></div>
+        <!-- Setas de navegação para os quadrados -->
+        <div class="square">
+            <button class="arrow-button">←</button>
+            <button class="arrow-button">→</button>
+            <button class="arrow-button">↻</button>
+        </div>
+
+        <!-- Quadrado de baixo (com opções de calças) -->
+        <div class="square">
+            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+1')">Bottom 1</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+2')">Bottom 2</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300x300.png?text=Bottom+3')">Bottom 3</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
