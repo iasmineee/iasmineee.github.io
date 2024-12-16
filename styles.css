@@ -17,7 +17,7 @@ body::before, body::after {
     position: fixed;
     left: 0;
     width: 100%;
-    height: 1vh; /* Ajustando para 1% da altura da tela */
+    height: 1cm; /* 1 cm de altura para a barra */
     background-color: black;
     z-index: 1000; /* Garante que a barra apareça sobre outros conteúdos */
     display: none; /* Inicialmente escondido */
@@ -29,6 +29,27 @@ body::before {
 
 body::after {
     bottom: 0; /* Barra na parte inferior */
+}
+
+/* Animação para o texto passando na barra superior */
+#top-bar-text {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    animation: slideText 10s linear infinite;
+}
+
+@keyframes slideText {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
 }
 
 /* Tela de carregamento com GIF */
@@ -63,7 +84,35 @@ body::after {
     padding: 20px;
 }
 
-h1 {
-    font-size: 36px;
+/* Retângulo central dividido em 2 quadrados */
+.center-rectangle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Ajuste para evitar que fique em cima das barras */
+}
+
+.top-square, .bottom-square {
+    width: 100%;
+    height: 50vh; /* Cada quadrado ocupa 50% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
