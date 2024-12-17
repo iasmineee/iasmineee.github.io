@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- GIF inicial -->
-    <div id="gif-container">
-        <img src="assets/hangers.gif" alt="Loading...">
+    <!-- Tela inicial com o GIF -->
+    <div id="gif-container" class="full-screen">
+        <img src="assets/hangers.gif" alt="Hangers GIF">
     </div>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo principal com o fundo de leopardo -->
     <div id="main-content" class="hidden">
-        <!-- Barra preta superior -->
-        <div class="bar bar-top">
-            <div class="scrolling-text">Yaz's Closet Yaz's Closet Yaz's Closet Yaz's Closet</div>
+        <!-- Barras pretas -->
+        <div class="black-bar top-bar">
+            <marquee behavior="scroll" direction="left">Yaz's Closet</marquee>
         </div>
 
         <!-- Retângulo central -->
-        <div class="center-container">
-            <!-- Quadrado superior (tops) -->
-            <div class="square">
-                <img id="top-img" src="https://via.placeholder.com/300x300.png?text=Top+1" alt="Top">
-                <div class="navigation">
-                    <button onclick="navigateTop(-1)">&#9664;</button>
-                    <span>TOPS</span>
-                    <button onclick="navigateTop(1)">&#9654;</button>
-                </div>
+        <div class="central-container">
+            <div class="top-box">
+                <!-- Quadrado superior -->
+                <p>Top Options</p>
             </div>
-
-            <!-- Quadrado inferior (calças) -->
-            <div class="square">
-                <img id="bottom-img" src="https://via.placeholder.com/300x300.png?text=Bottom+1" alt="Bottom">
-                <div class="navigation">
-                    <button onclick="navigateBottom(-1)">&#9664;</button>
-                    <span>BOTTOMS</span>
-                    <button onclick="navigateBottom(1)">&#9654;</button>
-                </div>
+            <div class="bottom-box">
+                <!-- Quadrado inferior -->
+                <p>Bottom Options</p>
             </div>
         </div>
 
-        <!-- Barra preta inferior -->
-        <div class="bar bar-bottom"></div>
+        <!-- Barras pretas -->
+        <div class="black-bar bottom-bar"></div>
     </div>
 
     <script src="script.js"></script>
