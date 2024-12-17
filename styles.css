@@ -24,6 +24,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1; /* Certificando que o GIF fique atrás do conteúdo */
 }
 
 #gif {
@@ -39,7 +40,7 @@ body {
     position: absolute;
     top: 100px;
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 100px); /* Ajustando para não cobrir a barra */
     gap: 30px;
 }
 
