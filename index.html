@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Tela inicial com o GIF -->
-    <div id="gif-container" class="full-screen">
-        <img src="assets/hangers.gif" alt="Hangers GIF">
+
+    <!-- Barra preta com o nome rolando -->
+    <div class="top-bar">
+        <span>Yaz's Closet</span>
     </div>
 
-    <!-- Conteúdo principal com o fundo de leopardo -->
-    <div id="main-content" class="hidden">
-        <!-- Barras pretas -->
-        <div class="top-bar">Yaz's Closet</div>
-        
-        <!-- Retângulo central dividido -->
-        <div class="center-container">
-            <!-- Quadrado superior -->
-            <div class="top-box">
-                <p>Tops</p>
-                <div class="navigation">
-                    <button class="arrow-left" onclick="changeTop('left')">&lt;&lt;</button>
-                    <button class="arrow-middle" onclick="changeTop('middle')">&gt;</button>
-                    <button class="arrow-right" onclick="changeTop('right')">&gt;&gt;</button>
-                </div>
-            </div>
-            
-            <!-- Quadrado inferior -->
-            <div class="bottom-box">
-                <p>Bottoms</p>
-                <div class="navigation">
-                    <button class="arrow-left" onclick="changeBottom('left')">&lt;&lt;</button>
-                    <button class="arrow-middle" onclick="changeBottom('middle')">&gt;</button>
-                    <button class="arrow-right" onclick="changeBottom('right')">&gt;&gt;</button>
-                </div>
-            </div>
+    <!-- Área principal com o GIF inicial -->
+    <div id="gif-container">
+        <img id="gif" src="assets/hangers.gif" alt="Hangers" />
+    </div>
+
+    <!-- Retângulo central branco dividido em 2 quadrados -->
+    <div class="main-container">
+        <div class="top-square">
+            <!-- Seções de tops (6 opções) -->
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+1')">Top 1</button>
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+2')">Top 2</button>
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+3')">Top 3</button>
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+4')">Top 4</button>
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+5')">Top 5</button>
+            <button onclick="changeTop('https://via.placeholder.com/300?text=Top+6')">Top 6</button>
         </div>
 
-        <!-- Barra preta inferior -->
-        <div class="bottom-bar"></div>
+        <div class="bottom-square">
+            <!-- Seções de calças (6 opções) -->
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+1')">Bottom 1</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+2')">Bottom 2</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+3')">Bottom 3</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+4')">Bottom 4</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+5')">Bottom 5</button>
+            <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+6')">Bottom 6</button>
+        </div>
     </div>
 
-    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
