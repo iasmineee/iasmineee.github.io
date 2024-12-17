@@ -1,163 +1,117 @@
-/* Configurações iniciais */
-* {
+/* Definindo o fundo de leopardo */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/leopard-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    cursor: url('assets/cursor.cur'), auto; /* Cursor personalizado */
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
-    overflow: hidden; /* Evita rolagem */
-    font-family: Arial, sans-serif;
     text-align: center;
-    background: url('assets/leopard-pattern.jpg') no-repeat center center fixed;
-    background-size: cover;
+    height: 100vh;
+    cursor: url('assets/cursor.cur') 16 16, auto; /* Cursor personalizado */
 }
 
-/* Tela inicial com o GIF */
-.full-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
-
-.full-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Esconde o conteúdo principal inicialmente */
-.hidden {
-    display: none;
-}
-
-/* Barras pretas */
-.top-bar, .bottom-bar {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    line-height: 20px;
-}
-
+/* Barra preta com nome rolando */
 .top-bar {
+    position: fixed;
     top: 0;
-    text-transform: uppercase;
-    animation: scrollText 10s linear infinite;
-}
-
-.bottom-bar {
-    bottom: 0;
-}
-
-/* Retângulo central dividido */
-.center-container {
-    position: absolute;
-    top: 20px; /* Abaixo da barra preta */
-    bottom: 20px; /* Acima da barra preta */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 9cm;
+    left: 0;
+    width: 100%;
+    height: 30px; /* 1cm aproximadamente */
+    background-color: black;
     display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 2px solid black;
-    overflow: hidden;
-}
-
-.top-box, .bottom-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-bottom: 2px solid black;
-    font-size: 18px;
-    color: black;
-}
-
-.bottom-box {
-    border-bottom: none;
-}
-
-.navigation {
-    margin-top: 10px;
-}
-
-.navigation button {
-    background: black;
+    justify-content: center;
+    overflow: hidden;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite;
 }
 
-.navigation button:hover {
-    background: gray;
-}
-
-/* Animação do texto na barra superior */
-@keyframes scrollText {
-    0% {
+@keyframes scroll-text {
+    from {
         transform: translateX(100%);
     }
-
-    
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
 
-/* Define o cursor original como escondido */
-* {
-    cursor: none; /* Esconde o cursor padrão */
-}
-
-/* Pseudo-elemento para o cursor maior */
-body {
-    position: relative;
-}
-
-/* Pseudo-elemento que simula um cursor maior */
-body::after {
-    content: "";
+/* Definindo o contêiner do GIF */
+#gif-container {
     position: absolute;
-    width: 40px; /* Ajuste o tamanho do cursor */
-    height: 40px; /* Ajuste o tamanho do cursor */
-    background: url('assets/cursor.cur') no-repeat center center;
-    background-size: contain;
-    pointer-events: none;
-    transform: translate(-50%, -50%); /* Centraliza o cursor */
-}
-
-/* Atualiza a posição do pseudo-cursor conforme o movimento do mouse */
-body:hover::after {
-    display: block;
-}
-
-body::after {
-    top: 0;
+    top: 30px; /* Abaixo da barra */
     left: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s ease-in-out;
+    right: 0;
+    height: calc(100vh - 60px); /* Ajusta a altura do GIF */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: gif-animation 1s forwards;
+}
+
+@keyframes gif-animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Container principal */
+.main-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Retângulo branco dividido em 2 quadrados */
+.top-square, .bottom-square {
+    background-color: white;
+    width: 9cm; /* Definindo largura do quadrado */
+    height: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Definindo o efeito do cursor */
 body {
-    cursor: url('assets/cursor.cur'), auto; /* Cursor normal */
+    cursor: url('assets/cursor.cur') 16 16, auto;
 }
