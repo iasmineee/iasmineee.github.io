@@ -20,25 +20,25 @@
 
     <!-- Retângulo central branco dividido em 2 quadrados -->
     <div class="main-container">
-        <div class="top-square">
+        <div class="square">
             <div class="arrow-container">
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+1')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+2')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+3')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+4')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+5')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+6')">&#8593;</button>
+                <button onclick="changeImage('top', 'up')">&#8593;</button>
+                <button onclick="changeImage('top', 'down')">&#8595;</button>
+                <button onclick="changeImage('top', 'up')">&#8593;</button>
+            </div>
+            <div class="image-container">
+                <img id="top-image" src="https://via.placeholder.com/300?text=Top+1" alt="Top Image">
             </div>
         </div>
 
-        <div class="bottom-square">
+        <div class="square">
             <div class="arrow-container">
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+1')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+2')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+3')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+4')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+5')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+6')">&#8595;</button>
+                <button onclick="changeImage('bottom', 'up')">&#8593;</button>
+                <button onclick="changeImage('bottom', 'down')">&#8595;</button>
+                <button onclick="changeImage('bottom', 'up')">&#8593;</button>
+            </div>
+            <div class="image-container">
+                <img id="bottom-image" src="https://via.placeholder.com/300?text=Bottom+1" alt="Bottom Image">
             </div>
         </div>
     </div>
