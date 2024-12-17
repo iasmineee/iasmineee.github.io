@@ -1,52 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaz's Closet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Clueless Closet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Barra preta com o nome rolando -->
-    <div class="top-bar">
-        <span>Yaz's Closet</span>
-    </div>
-
-    <!-- Área principal com o GIF inicial -->
-    <div id="gif-container">
-        <img id="top-img" src="assets/top-placeholder.jpg" alt="Top Image" />
-        <img id="bottom-img" src="assets/bottom-placeholder.jpg" alt="Bottom Image" />
-    </div>
-
-    <!-- Retângulo central branco dividido em 2 quadrados -->
-    <div class="main-container">
-        <div class="top-square">
-            <!-- Seções de tops (6 opções) -->
-            <div class="arrow-container">
-                <button onclick="changeTop('assets/top1.jpg')">&#8593;</button>
-                <button onclick="changeTop('assets/top2.jpg')">&#8593;</button>
-                <button onclick="changeTop('assets/top3.jpg')">&#8593;</button>
-                <button onclick="changeTop('assets/top4.jpg')">&#8593;</button>
-                <button onclick="changeTop('assets/top5.jpg')">&#8593;</button>
-                <button onclick="changeTop('assets/top6.jpg')">&#8593;</button>
-            </div>
+    <div class="container">
+        <h1>Monte seu look!</h1>
+        <div class="image-container">
+            <img id="top-image" src="images/top1.png" alt="Top">
+            <img id="bottom-image" src="images/bottom1.png" alt="Bottom">
         </div>
-
-        <div class="bottom-square">
-            <!-- Seções de calças (6 opções) -->
-            <div class="arrow-container">
-                <button onclick="changeBottom('assets/bottom1.jpg')">&#8595;</button>
-                <button onclick="changeBottom('assets/bottom2.jpg')">&#8595;</button>
-                <button onclick="changeBottom('assets/bottom3.jpg')">&#8595;</button>
-                <button onclick="changeBottom('assets/bottom4.jpg')">&#8595;</button>
-                <button onclick="changeBottom('assets/bottom5.jpg')">&#8595;</button>
-                <button onclick="changeBottom('assets/bottom6.jpg')">&#8595;</button>
-            </div>
+        <div class="button-container">
+            <button class="button" id="randomize-button">Look Aleatório</button>
+            <button class="button" id="save-button">Salvar Look</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
