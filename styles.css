@@ -116,7 +116,48 @@ body, html {
     0% {
         transform: translateX(100%);
     }
+
+    
     100% {
         transform: translateX(-100%);
     }
+}
+
+/* Define o cursor original como escondido */
+* {
+    cursor: none; /* Esconde o cursor padrão */
+}
+
+/* Pseudo-elemento para o cursor maior */
+body {
+    position: relative;
+}
+
+/* Pseudo-elemento que simula um cursor maior */
+body::after {
+    content: "";
+    position: absolute;
+    width: 40px; /* Ajuste o tamanho do cursor */
+    height: 40px; /* Ajuste o tamanho do cursor */
+    background: url('assets/cursor.cur') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%); /* Centraliza o cursor */
+}
+
+/* Atualiza a posição do pseudo-cursor conforme o movimento do mouse */
+body:hover::after {
+    display: block;
+}
+
+body::after {
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-in-out;
+}
+
+body {
+    cursor: url('assets/cursor.cur'), auto; /* Cursor normal */
 }
