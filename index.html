@@ -1,23 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clueless Closet</title>
+    <title>Yaz's Closet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Monte seu look!</h1>
-        <div class="image-container">
-            <img id="top-image" src="images/top1.png" alt="Top">
-            <img id="bottom-image" src="images/bottom1.png" alt="Bottom">
+
+    <!-- Barra preta com o nome rolando -->
+    <div class="top-bar">
+        <span>Yaz's Closet</span>
+    </div>
+
+    <!-- Área principal com o GIF inicial -->
+    <div id="gif-container">
+        <img id="gif" src="assets/hangers.gif" alt="Hangers" />
+    </div>
+
+    <!-- Retângulo central branco dividido em 2 quadrados -->
+    <div class="main-container">
+        <div class="top-square">
+            <div class="arrow-container">
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+1')">&#8593;</button>
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+2')">&#8593;</button>
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+3')">&#8593;</button>
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+4')">&#8593;</button>
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+5')">&#8593;</button>
+                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+6')">&#8593;</button>
+            </div>
         </div>
-        <div class="button-container">
-            <button class="button" id="randomize-button">Look Aleatório</button>
-            <button class="button" id="save-button">Salvar Look</button>
+
+        <div class="bottom-square">
+            <div class="arrow-container">
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+1')">&#8595;</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+2')">&#8595;</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+3')">&#8595;</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+4')">&#8595;</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+5')">&#8595;</button>
+                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+6')">&#8595;</button>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
