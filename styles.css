@@ -110,7 +110,7 @@ button {
     color: black;
     border: none;
     font-size: 2rem;
-    cursor: url('assets/cursor.cur') 16 16, auto;
+    cursor: pointer;
     margin-bottom: 10px;
     width: 50px;
 }
