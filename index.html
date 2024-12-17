@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaz's Closet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +16,8 @@
 
     <!-- Área principal com o GIF inicial -->
     <div id="gif-container">
-        <img id="gif" src="assets/hangers.gif" alt="Hangers" />
+        <img id="top-img" src="assets/top-placeholder.jpg" alt="Top Image" />
+        <img id="bottom-img" src="assets/bottom-placeholder.jpg" alt="Bottom Image" />
     </div>
 
     <!-- Retângulo central branco dividido em 2 quadrados -->
@@ -23,24 +25,24 @@
         <div class="top-square">
             <!-- Seções de tops (6 opções) -->
             <div class="arrow-container">
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+1')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+2')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+3')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+4')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+5')">&#8593;</button>
-                <button onclick="changeTop('https://via.placeholder.com/300?text=Top+6')">&#8593;</button>
+                <button onclick="changeTop('assets/top1.jpg')">&#8593;</button>
+                <button onclick="changeTop('assets/top2.jpg')">&#8593;</button>
+                <button onclick="changeTop('assets/top3.jpg')">&#8593;</button>
+                <button onclick="changeTop('assets/top4.jpg')">&#8593;</button>
+                <button onclick="changeTop('assets/top5.jpg')">&#8593;</button>
+                <button onclick="changeTop('assets/top6.jpg')">&#8593;</button>
             </div>
         </div>
 
         <div class="bottom-square">
             <!-- Seções de calças (6 opções) -->
             <div class="arrow-container">
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+1')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+2')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+3')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+4')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+5')">&#8595;</button>
-                <button onclick="changeBottom('https://via.placeholder.com/300?text=Bottom+6')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom1.jpg')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom2.jpg')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom3.jpg')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom4.jpg')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom5.jpg')">&#8595;</button>
+                <button onclick="changeBottom('assets/bottom6.jpg')">&#8595;</button>
             </div>
         </div>
     </div>
