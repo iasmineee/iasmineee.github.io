@@ -15,26 +15,36 @@
     <!-- Conteúdo principal com o fundo de leopardo -->
     <div id="main-content" class="hidden">
         <!-- Barras pretas -->
-        <div class="black-bar top-bar">
-            <marquee behavior="scroll" direction="left">Yaz's Closet</marquee>
-        </div>
-
-        <!-- Retângulo central -->
-        <div class="central-container">
+        <div class="top-bar">Yaz's Closet</div>
+        
+        <!-- Retângulo central dividido -->
+        <div class="center-container">
+            <!-- Quadrado superior -->
             <div class="top-box">
-                <!-- Quadrado superior -->
-                <p>Top Options</p>
+                <p>Tops</p>
+                <div class="navigation">
+                    <button class="arrow-left" onclick="changeTop('left')">&lt;&lt;</button>
+                    <button class="arrow-middle" onclick="changeTop('middle')">&gt;</button>
+                    <button class="arrow-right" onclick="changeTop('right')">&gt;&gt;</button>
+                </div>
             </div>
+            
+            <!-- Quadrado inferior -->
             <div class="bottom-box">
-                <!-- Quadrado inferior -->
-                <p>Bottom Options</p>
+                <p>Bottoms</p>
+                <div class="navigation">
+                    <button class="arrow-left" onclick="changeBottom('left')">&lt;&lt;</button>
+                    <button class="arrow-middle" onclick="changeBottom('middle')">&gt;</button>
+                    <button class="arrow-right" onclick="changeBottom('right')">&gt;&gt;</button>
+                </div>
             </div>
         </div>
 
-        <!-- Barras pretas -->
-        <div class="black-bar bottom-bar"></div>
+        <!-- Barra preta inferior -->
+        <div class="bottom-bar"></div>
     </div>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
