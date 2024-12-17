@@ -54,3 +54,69 @@ body, html {
 }
 
 .top-bar {
+    top: 0;
+    text-transform: uppercase;
+    animation: scrollText 10s linear infinite;
+}
+
+.bottom-bar {
+    bottom: 0;
+}
+
+/* Retângulo central dividido */
+.center-container {
+    position: absolute;
+    top: 20px; /* Abaixo da barra preta */
+    bottom: 20px; /* Acima da barra preta */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9cm;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.top-box, .bottom-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    color: black;
+}
+
+.bottom-box {
+    border-bottom: none;
+}
+
+.navigation {
+    margin-top: 10px;
+}
+
+.navigation button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navigation button:hover {
+    background: gray;
+}
+
+/* Animação do texto na barra superior */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
