@@ -8,37 +8,34 @@
 </head>
 <body>
 
-    <!-- Barra preta com o nome rolando -->
+    <!-- Barra preta fixa no topo -->
     <div class="top-bar">
         <span>Yaz's Closet</span>
     </div>
 
-    <!-- Área principal com o GIF -->
-    <div id="gif-container">
-        <img id="gif" src="assets/hangers.gif" alt="Hangers" />
-    </div>
-
-    <!-- Retângulo central branco dividido em 2 quadrados -->
+    <!-- Container principal com fundo de padrão leopardo -->
     <div class="main-container">
+        <!-- Quadrado superior -->
         <div class="square">
-            <div class="arrow-container">
-                <button onclick="changeImage('top', 'up')"><img src="path-to-your-arrow-up-image.png" alt="Up Arrow"></button>
-                <button onclick="changeImage('top', 'down')"><img src="path-to-your-arrow-down-image.png" alt="Down Arrow"></button>
-                <button onclick="changeImage('top', 'up')"><img src="path-to-your-arrow-up-image.png" alt="Up Arrow"></button>
-            </div>
             <div class="image-container">
-                <img id="top-image" src="https://via.placeholder.com/300?text=Top+1" alt="Top Image">
+                <img id="top-image" src="https://via.placeholder.com/300x300?text=Top+1" alt="Top">
+            </div>
+            <div class="controls">
+                <button onclick="changeImage('top', 'prev')"><img src="assets/arrow-left.png" alt="Left"></button>
+                <button onclick="changeImage('top', 'next')"><img src="assets/arrow-right.png" alt="Right"></button>
+                <button onclick="autoRotate('top')"><img src="assets/play-button.png" alt="Play"></button>
             </div>
         </div>
 
+        <!-- Quadrado inferior -->
         <div class="square">
-            <div class="arrow-container">
-                <button onclick="changeImage('bottom', 'up')"><img src="path-to-your-arrow-up-image.png" alt="Up Arrow"></button>
-                <button onclick="changeImage('bottom', 'down')"><img src="path-to-your-arrow-down-image.png" alt="Down Arrow"></button>
-                <button onclick="changeImage('bottom', 'up')"><img src="path-to-your-arrow-up-image.png" alt="Up Arrow"></button>
-            </div>
             <div class="image-container">
-                <img id="bottom-image" src="https://via.placeholder.com/300?text=Bottom+1" alt="Bottom Image">
+                <img id="bottom-image" src="https://via.placeholder.com/300x300?text=Bottom+1" alt="Bottom">
+            </div>
+            <div class="controls">
+                <button onclick="changeImage('bottom', 'prev')"><img src="assets/arrow-left.png" alt="Left"></button>
+                <button onclick="changeImage('bottom', 'next')"><img src="assets/arrow-right.png" alt="Right"></button>
+                <button onclick="autoRotate('bottom')"><img src="assets/play-button.png" alt="Play"></button>
             </div>
         </div>
     </div>
