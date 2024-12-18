@@ -8,43 +8,56 @@
 </head>
 <body>
 
-    <!-- Barra preta fixa no topo -->
+    <!-- Barra preta com o nome rolando -->
     <div class="top-bar">
         <span>Yaz's Closet</span>
     </div>
 
-    <!-- GIF inicial -->
+    <!-- Área do GIF inicial -->
     <div id="gif-container">
-        <img id="gif" src="assets/hangers.gif" alt="GIF de cabides" />
+        <img id="gif" src="assets/hangers.gif" alt="Hangers" />
     </div>
 
-    <!-- Container principal com 2 quadrados alinhados verticalmente -->
-    <div class="main-container">
+    <!-- Área principal com os dois quadrados (inicialmente oculto) -->
+    <div id="main-content" class="main-container hidden">
         <!-- Quadrado superior -->
-        <div class="square">
-            <div class="image-container">
-                <img id="top-image" src="https://via.placeholder.com/300x300?text=Top+1" alt="Top">
+        <div class="top-square">
+            <div class="button-container">
+                <button onclick="restartSequence('top')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Left" style="width: 30px;">
+                </button>
+
+                <button onclick="showNextImage('top')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Play" style="width: 30px;">
+                </button>
+
+                <button onclick="goToEnd('top')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Right" style="width: 30px;">
+                </button>
             </div>
-            <div class="controls">
-                <button onclick="changeImage('top', 'prev')"><img src="assets/arrow-left.png" alt="Left"></button>
-                <button onclick="changeImage('top', 'next')"><img src="assets/arrow-right.png" alt="Right"></button>
-                <button onclick="autoRotate('top')"><img src="assets/play-button.png" alt="Play"></button>
-            </div>
+            <img id="top-image" src="https://via.placeholder.com/300?text=Top+1" alt="Top Display" />
         </div>
 
         <!-- Quadrado inferior -->
-        <div class="square">
-            <div class="image-container">
-                <img id="bottom-image" src="https://via.placeholder.com/300x300?text=Bottom+1" alt="Bottom">
+        <div class="bottom-square">
+            <div class="button-container">
+                <button onclick="restartSequence('bottom')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Left" style="width: 30px;">
+                </button>
+
+                <button onclick="showNextImage('bottom')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Play" style="width: 30px;">
+                </button>
+
+                <button onclick="goToEnd('bottom')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Right" style="width: 30px;">
+                </button>
             </div>
-            <div class="controls">
-                <button onclick="changeImage('bottom', 'prev')"><img src="assets/arrow-left.png" alt="Left"></button>
-                <button onclick="changeImage('bottom', 'next')"><img src="assets/arrow-right.png" alt="Right"></button>
-                <button onclick="autoRotate('bottom')"><img src="assets/play-button.png" alt="Play"></button>
-            </div>
+            <img id="bottom-image" src="https://via.placeholder.com/300?text=Bottom+1" alt="Bottom Display" />
         </div>
     </div>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
