@@ -95,3 +95,22 @@ body {
     width: 30px;
     height: 30px;
 }
+
+#gif-container {
+    position: fixed; /* Fixa o GIF para cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largura completa da janela */
+    height: 100vh; /* Altura completa da janela */
+    z-index: 10; /* Garante que o GIF fique acima de todos os outros elementos */
+    display: flex; /* Centraliza o GIF */
+    justify-content: center;
+    align-items: center;
+    background: black; /* Cor de fundo enquanto o GIF carrega */
+}
+
+#gif {
+    width: 100%; /* Ajusta a largura para cobrir a tela */
+    height: auto; /* Mantém a proporção do GIF */
+    object-fit: cover; /* Garante que o GIF preencha o espaço */
+}
