@@ -19,39 +19,35 @@
     </div>
 
     <!-- Área principal com os dois quadrados -->
-    <div id="main-content" class="main-container hidden">
-        <!-- Quadrado superior -->
-        <div class="top-square">
-            <div class="button-container">
-                <button onclick="restartSequence('top')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Left">
-                </button>
-                <button onclick="showNextImage('top')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Play">
-                </button>
-                <button onclick="goToEnd('top')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Right">
-                </button>
-            </div>
-            <img id="top-image" src="https://via.placeholder.com/300?text=Top+1" alt="Top Display" />
-        </div>
-
-        <!-- Quadrado inferior -->
-        <div class="bottom-square">
-            <div class="button-container">
-                <button onclick="restartSequence('bottom')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Left">
-                </button>
-                <button onclick="showNextImage('bottom')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/0/375.png" alt="Play">
-                </button>
-                <button onclick="goToEnd('bottom')">
-                    <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Right">
-                </button>
-            </div>
-            <img id="bottom-image" src="https://via.placeholder.com/300?text=Bottom+1" alt="Bottom Display" />
+   <div class="main-container">
+    <div class="top-square">
+        <div class="arrow-container">
+            <button onclick="changeImage('top', 'prev')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Seta esquerda" style="width: 30px;">
+            </button>
+            <button onclick="changeImage('top', 'next')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Seta direita" style="width: 30px;">
+            </button>
+            <button onclick="changeImage('top', 'play')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Seta play" style="width: 30px;">
+            </button>
         </div>
     </div>
+
+    <div class="bottom-square">
+        <div class="arrow-container">
+            <button onclick="changeImage('bottom', 'prev')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Seta esquerda" style="width: 30px;">
+            </button>
+            <button onclick="changeImage('bottom', 'next')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="Seta direita" style="width: 30px;">
+            </button>
+            <button onclick="changeImage('bottom', 'play')">
+                <img src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="Seta play" style="width: 30px;">
+            </button>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
